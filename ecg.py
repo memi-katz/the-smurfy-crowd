@@ -1,3 +1,4 @@
+# importing the needed libs
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -17,13 +18,13 @@ dsf = sf / sf_ori
 ecg = resample(ecg, dsf)
 ecg = filter_data(ecg, sf, 2, 30, verbose=0)
 
-# Select only a 20 sec window
-window = 20
-start = 155
+# Select only a 25 sec window
+window = 25
+start = 150
 ecg = ecg[int(start*sf):int((start+window)*sf)]
 
 # R-R peaks detection
-rr, _ = find_peaks(ecg, distance=40, height=0.5)
+rr, _ = find_peaks(ecg, distance=30, height=0.7)
 
 plt.plot(ecg)
 plt.plot(rr, ecg[rr], 'o')
