@@ -1,3 +1,5 @@
+# http://gitting-some.about-noon.com/
+
 from math import sqrt
 #required for the sqrt() function, if you want to avoid doing **0.5
 import random
