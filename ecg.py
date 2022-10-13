@@ -129,4 +129,3 @@ if __name__ == "__main__":
     print(''.join(map(lambda x: str(x), encrypted_msg)))
     print("Decrypted msg: ")
     print(decrypt(encrypted_msg, private))
-    #gitting.about-noon.com
